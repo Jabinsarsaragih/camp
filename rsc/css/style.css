@@ -26,6 +26,9 @@ body {
     --backgroundColor : #000000c6;
 }
 @media (max-width: 768px) {
+    .allow-dekstop {
+        display: none;
+    }
     .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -60,9 +63,7 @@ body {
     .hidden {
         display: block;
     }
-    .allow-dekstop {
-        display: none;
-    }
+    
     
 }
 *{
