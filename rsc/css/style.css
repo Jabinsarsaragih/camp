@@ -13,11 +13,17 @@ font-variation-settings:
 body {
     background-color: #000000;
 }
+.hidden {
+    display: none;
+}
+.allow-dekstop {
+    display: block;
+}
 :root{
     --colorHeading : #4cb34c;
     --colorNav : #205120;
     --colorHoverP : #117e11;
-    --backgroundColor : #c8d4c8c6;
+    --backgroundColor : #000000c6;
 }
 @media (max-width: 768px) {
     .material-symbols-outlined {
@@ -44,6 +50,18 @@ body {
     }
     .w-15{
         width: 0%;
+    }
+    .welcome{
+        letter-spacing: 20px;
+        font-size: 2rem;
+        width: 0%;
+        color: #478f47d7;
+    }
+    .hidden {
+        display: block;
+    }
+    .allow-dekstop {
+        display: none;
     }
     
 }
@@ -79,9 +97,9 @@ body{
     cursor: default;
 }
 .welcome{
-    letter-spacing: 2px;
-    font-size: 4rem;
-    width: 150%;
+    letter-spacing: 20px;
+    font-size: 2rem;
+    width: 0%;
     color: #478f47d7;
 }
 .text{
