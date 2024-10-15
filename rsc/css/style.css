@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+.afacad-flux-100 {
+font-family: "Afacad Flux", sans-serif;
+font-optical-sizing: auto;
+font-weight: 100;
+font-style: normal;
+font-variation-settings:
+    "slnt" 0;
+}
+.justify {
+    text-align: justify;
+}
+body {
+    background-color: #000000;
+}
+:root{
+    --colorHeading : #4cb34c;
+    --colorNav : #205120;
+    --colorHoverP : #117e11;
+    --backgroundColor : #c8d4c8c6;
+}
+@media (max-width: 768px) {
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+    }
+    .mobile {
+        text-size-adjust: 50%;
+    }
+    .m-center {
+        text-align: center;
+    }
+    .m-size {
+        text-size-adjust: 30%;
+    }
+    :root {
+        --colorHeading: #4cb34c;
+        --colorNav: #3e7a3e;
+        --colorHoverP: #117e11;
+        --backgroundColor: #000000;
+    }
+    .w-15{
+        width: 0%;
+    }
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.header {
+    background-color: var(--backgroundColor);
+}
+.cursor-default {
+    cursor: default;
+    color: var(--colorHeading);
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+.w-15{
+    width: 20%;
+}
+.navbar a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--colorNav);
+    font-weight: 500;
+}
+.navbar a:hover{
+    color: var(--colorHoverP);
+}
+.main{
+    cursor: default;
+}
+.welcome{
+    letter-spacing: 2px;
+    font-size: 4rem;
+    width: 150%;
+    color: #478f47d7;
+}
+.text{
+    text-indent: 15px;
+    color: #30322f;
+}
