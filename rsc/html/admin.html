@@ -6,15 +6,28 @@
     <title>Admin</title>
     <style>
         body {
+            color: green;
             background-color: #000000;
             font-family: Arial, sans-serif;
         }
         h1 {
             text-align: center;
         }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { color: transparent;}
+            50% { color: transparent;}
+            51% { color: unset;}
+            100% { color: unset;}
+        }
     </style>
 </head>
 <body>
     <h1>Admin</h1>
+    <b>/><a class="blink">_</a></b>
 </body>
 </html>
+
+<!-- <html><head><meta http-equiv="refresh" content="1; url="<?php echo $_SERVER['PHP_SELF']; ?></head><body></body></html> -->

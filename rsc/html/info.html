@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Info</title>
     <style>
         body {
+            color: red;
             background-color: #000000;
             font-family: Arial, sans-serif;
+            animation: bg .01s infinite;
         }
         h1 {
             text-align: center;
         }
+        @keyframes bg {
+            0% { background-color: red; color: cyan;}
+            50% { background-color: yellow; color: transparent;}
+            51% { background-color: green; color: transparent;}
+            100% { background-color: blue; color: black;}
+        }
     </style>
 </head>
 <body>
-    <h1>Admin</h1>
+    <h1>Info</h1>
+
 </body>
 </html>
