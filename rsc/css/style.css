@@ -29,33 +29,6 @@ font-variation-settings:
     --colorHoverP : #bd3d3d;
     --backgroundColor : #000000;
 }
-@media (max-width: 768px) {
-    .allow-dekstop {
-        display: none;
-    }
-    .mobile {
-        text-size-adjust: 50%;
-    }
-    .m-center {
-        text-align: center;
-    }
-    .m-size {
-        text-size-adjust: 30%;
-    }
-    .w-15{
-        width: 0%;
-    }
-    .welcome{
-        letter-spacing: 20px;
-        font-size: 2rem;
-        width: 0%;
-    }
-    .hidden {
-        display: block;
-    }
-}
-    
-}
 *{
     padding: 0;
     margin: 0;
