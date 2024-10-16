@@ -1,9 +1,9 @@
 {
-    "name": "CAMP",
+    "name": "Curated Artistry and Master Projects",
     "short_name": "CAMP",
-    "start_url": "/",
+    "start_url": "https://jabinsarsaragih.github.io/camp/",
     "display": "standalone",
-    "background_color": "#ffffff",
+    "background_color": "#000000",
     "theme_color": "#000000",
     "icons": [
       {
@@ -12,7 +12,7 @@
         "type": "image/png"
       },
       {
-        "src": "rsc/png/icon-512x512.png",
+        "src": "rsc/png/icon-192x192.png",
         "sizes": "512x512",
         "type": "image/png"
       }
