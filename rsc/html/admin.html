@@ -23,6 +23,28 @@
             100% { color: unset;}
         }
     </style>
+    <script>
+        // Putar audio saat pengguna berinteraksi dengan halaman
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio1 = new Audio('../../rsc/wav/info.wav');
+            document.body.addEventListener('click', function() {
+                //audio1.loop = true;
+                //audio1.playbackRate = 0.1;
+                audio1.play().catch(function(error) {
+                    console.log('Audio playback failed:', error);
+                });
+
+                // Tambahkan event listener untuk memberi jeda sebelum memutar audio lagi
+                audio1.addEventListener('ended', function() {
+                    setTimeout(function() {
+                        audio1.play().catch(function(error) {
+                            console.log('Audio playback failed:', error);
+                        });
+                    }, 900); // Jeda 2 detik sebelum memutar lagi
+                });
+            }, { once: true });
+        });
+    </script>
 </head>
 <body>
     <h1>Admin</h1>

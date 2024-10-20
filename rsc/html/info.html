@@ -21,6 +21,19 @@
             100% { background-color: blue; color: black;}
         }
     </style>
+    <script>
+        // Putar audio saat pengguna berinteraksi dengan halaman
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio1 = new Audio('../../rsc/wav/critical.wav');
+            document.body.addEventListener('click', function() {
+                audio1.loop = true;
+                audio1.playbackRate = 10.0;
+                audio1.play().catch(function(error) {
+                    console.log('Audio playback failed:', error);
+                });
+            }, { once: true });
+        });
+    </script>
 </head>
 <body>
     <h1>Info</h1>
