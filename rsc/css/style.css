@@ -1,80 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
-.afacad-flux-100 {
-font-family: "Afacad Flux", sans-serif;
-font-optical-sizing: auto;
-font-weight: 100;
-font-style: normal;
-font-variation-settings:
-    "slnt" 0;
-}
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-    }
-.justify {
-    text-align: justify;
-}
-.hidden {
-    display: none;
-}
-.allow-dekstop {
-    display: block;
-}
-:root{
-    --colorHeading : #02fa02;
-    --colorNav : #2cf803;
-    --colorHoverP : #bd3d3d;
-    --backgroundColor : #000000;
-}
-*{
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     overflow-x: hidden;
     background-color: #000000;
 }
+
+.afacad-flux-100 {
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "slnt"0;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'24
+}
+
+.justify {
+    text-align: justify;
+}
+
+.hidden {
+    display: none;
+}
+
+.allow-dekstop {
+    display: block;
+}
+
+:root {
+    --colorHeading: #02fa02;
+    --colorNav: #2cf803;
+    --colorHoverP: #bd3d3d;
+    --backgroundColor: #272525;
+}
+
+/* start navbar */
+
 .header {
     background-color: var(--backgroundColor);
+    z-index: 9999;
+    top: 0;
 }
+
+.headerTitle {
+    letter-spacing: 20px;
+    font-size: 3rem;
+    color: #2eb32ed7;
+}
+
 .cursor-default {
     cursor: default;
     color: var(--colorHeading);
     font-size: 3rem;
     letter-spacing: 1.5px;
 }
-.w-15{
-    width: 20%;
+
+.w-120 {
+    width: 120px;
 }
-.navbar a {
+
+.navbar .linkNavbar {
     text-decoration: none;
-    font-size: 2rem;
     color: var(--colorNav);
     font-weight: 500;
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
 }
-.navbar a:hover{
-    color: var(--colorHoverP);
+
+.navbar .linkNavbar .text {
+    position: absolute;
+    top: 0;
+    margin-right: 20px;
+    font-family: "Titillium Web",
+        sans-serif;
+    opacity: 0;
+    font-size: 1.5rem;
+    color: var(--colorNav);
+    font-weight: 600;
+    margin: 0 15px;
 }
-.main{
+
+.navbar .linkNavbar:hover .text {
+    opacity: 1;
+    transition: .5s;
+}
+
+.linkNavbar .icon {
+    transition: .5s;
+    margin: 0 15px;
+}
+
+.navbar .linkNavbar:hover .icon {
+    opacity: 0;
+}
+
+/* End navbar */
+
+
+/* section 1 */
+.section1 {
     cursor: default;
+    z-index: -9999;
 }
-.welcome{
-    letter-spacing: 20px;
-    font-size: 2rem;
-    width: 0%;
-    color: #2eb32ed7;
+
+.section1 .section1Title {
+    letter-spacing: 1px;
+    font-size: 80px;
 }
-.text{
-    text-indent: 15px;
-    color: #b8bbb8;
+
+.section1 .section1Text {
+    text-indent: 50px;
+    font-size: 1.4rem;
+    background: linear-gradient(to right, #4f7945, #6d906d, #074204);
+    /* Gradien warna */
+    background-clip: text;
+    /* Untuk Chrome, Firefox, dan Safari */
+    color: transparent;
+    /* Membuat warna teks transparan */
+    font-weight: 600;
 }
+
 .bold {
     font-weight: 700;
 }
 
 .margin {
     margin-right: -80px;
+}
+
+/* end section1 */
+
+/* start section2 */
+.section2Title {
+    border-bottom: 2px solid #535151;
+}
+
+.section2Title h1 {
+    letter-spacing: 1px;
+    font-family: "Titillium Web",
+        sans-serif;
+}
+.member{
+    width: 500px;
+    box-shadow: 1px 1px 5px black;
+}
+.memberImg{
+    width: 150px;
+}
+.memberImg img {
+    width: 100px;
+    height: 100px;
+    border-right: 3px dotted #474646;
+}
+.memberName{
+    width: 400px;
+}
+.memberName h3{
+    letter-spacing: -2px;
+}
+.memberName p{
+    text-indent: 5px;
+    letter-spacing: -.5px;
+    overflow-x: auto;
+    height: 100px;
+    font-size: 17px;
+}
+
+/* end section2 */
+
+/* special */
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+/* Media query for portrait mode */
+@media (orientation: portrait) {
+    bc {
+        display: none;
+    }
+
+    ab {
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0rem;
+        display: flex;
+    }
 }

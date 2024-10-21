@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body {
+            color: green;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { color: transparent;}
+            50% { color: transparent;}
+            51% { color: unset;}
+            100% { color: unset;}
+        }
+    </style>
+    <script>
+        // Putar audio saat pengguna berinteraksi dengan halaman
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio1 = new Audio('../../rsc/wav/info.wav');
+            document.body.addEventListener('click', function() {
+                //audio1.loop = true;
+                //audio1.playbackRate = 0.1;
+                audio1.play().catch(function(error) {
+                    console.log('Audio playback failed:', error);
+                });
+
+                // Tambahkan event listener untuk memberi jeda sebelum memutar audio lagi
+                audio1.addEventListener('ended', function() {
+                    setTimeout(function() {
+                        audio1.play().catch(function(error) {
+                            console.log('Audio playback failed:', error);
+                        });
+                    }, 900); // Jeda 2 detik sebelum memutar lagi
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Admin</h1>
+    <b>/><a class="blink">_</a></b>
+</body>
+</html>
+
+<!-- <html><head><meta http-equiv="refresh" content="1; url="<?php echo $_SERVER['PHP_SELF']; ?></head><body></body></html> -->
