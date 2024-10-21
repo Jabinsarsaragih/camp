@@ -1,55 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+<!-- https://jabinsarsaragih.github.io/camp/ -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <style>
-        body {
-            color: green;
-            background-color: #000000;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
-        .blink {
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0% { color: transparent;}
-            50% { color: transparent;}
-            51% { color: unset;}
-            100% { color: unset;}
-        }
-    </style>
-    <script>
-        // Putar audio saat pengguna berinteraksi dengan halaman
-        document.addEventListener('DOMContentLoaded', function() {
-            const audio1 = new Audio('../../rsc/wav/info.wav');
-            document.body.addEventListener('click', function() {
-                //audio1.loop = true;
-                //audio1.playbackRate = 0.1;
-                audio1.play().catch(function(error) {
-                    console.log('Audio playback failed:', error);
-                });
-
-                // Tambahkan event listener untuk memberi jeda sebelum memutar audio lagi
-                audio1.addEventListener('ended', function() {
-                    setTimeout(function() {
-                        audio1.play().catch(function(error) {
-                            console.log('Audio playback failed:', error);
-                        });
-                    }, 900); // Jeda 2 detik sebelum memutar lagi
-                });
-            });
-        });
-    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CAMP</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <base href="/page404.html">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Admin</h1>
-    <b>/><a class="blink">_</a></b>
-</body>
-</html>
 
-<!-- <html><head><meta http-equiv="refresh" content="1; url="<?php echo $_SERVER['PHP_SELF']; ?></head><body></body></html> -->
+<body>
+    <!-- start header -->
+    <div class="container-fluid header px-5 rounded-top-2 position-fixed">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <div class="logo mobile m-size text-uppercase headerTitle display-5 h1 fw-bolder opacity-100">
+                    <h1 class="m-center cursor-default fw-bolder" id="camp">camp</h1>
+                </div>
+                <div
+                    class="navbar w-10 justify-content-between allow-desktop only-dekstop bold d-flex align-items-center text-center">
+                    <a href="rsc\html\info.html"
+                        class="linkNavbar d-flex justify-content-center align-items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-info-circle mt-1 icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path
+                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                        </svg>
+                        <span class="text">Info</span>
+                    </a>
+                    <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-arrow-return-left text-success" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!-- start section2 -->
+    <div class="container-fluid section2 position-relative mt-3">
+        <div class="row">
+            <div class="col-12 mt-5 p-3">
+                <div class="section2Title">
+                    <h1 class="ms-3 fw-bold display-4">Admin</h1>
+                </div>
+                <div class="section2Member p-5 d-flex justify-content-around align-items-center">
+                    <div class="member first">
+                        <div class="memberAbout rounded-3 p-1 d-flex align-items-center">
+                            <div class="memberImg text-center">
+                                <img src="/img/member/jabinsar.jpg" class="img-fluid rounded-circle">
+                            </div>
+    
+                            <div class="memberName pt-1">
+                                <h3 class="text-center h2">Jabinsar Saragih</h>
+    
+                                <p class="text-start mt-3">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit odio eum ut, libero exercitationem laborum nihil! Perferendis, in doloribus. Suscipit mollitia tempora et. Perferendis ipsa reprehenderit assumenda ut nam eum.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="memberInfo p-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum beatae cumque voluptas quisquam nam dicta, nobis ab mollitia voluptates possimus placeat id fuga ducimus illo quis cum quibusdam iste a?</p>
+                        </div>
+
+                        <a href="#" class="btn btn-primary m-3">see</a>
+                    </div>
+                    <div class="member second">
+                        <div class="memberAbout rounded-3 p-1 d-flex align-items-center">
+                            <div class="memberImg text-center">
+                                <img src="#" class="img-fluid rounded-circle">
+                            </div>
+
+                            <div class="memberName pt-1">
+                                <h3 class="text-center h2">Rasyid Kurniyawan</h>
+
+                                    <p class="text-start mt-3">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit odio eum
+                                        ut, libero exercitationem laborum nihil! Perferendis, in doloribus. Suscipit
+                                        mollitia tempora et. Perferendis ipsa reprehenderit assumenda ut nam eum.
+                                    </p>
+                            </div>
+                        </div>
+
+                        <div class="memberInfo p-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum beatae cumque voluptas
+                                quisquam nam dicta, nobis ab mollitia voluptates possimus placeat id fuga ducimus illo
+                                quis cum quibusdam iste a?</p>
+                        </div>
+
+                        <a href="#" class="btn btn-primary m-3">see</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <script src="/rsc/js/script.js"></script>
+</body>
+
+</html>
