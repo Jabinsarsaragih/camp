@@ -4,6 +4,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -92,16 +93,18 @@ body {
     color: var(--colorNav);
     font-weight: 600;
     margin: 0 15px;
+    transition: .7s;
 }
 
 .navbar .linkNavbar:hover .text {
     opacity: 1;
-    transition: .5s;
+    transition: .7s;
 }
 
 .linkNavbar .icon {
-    transition: .5s;
+    transition: .3s;
     margin: 0 15px;
+    color: var(--colorNav);
 }
 
 .navbar .linkNavbar:hover .icon {
@@ -154,25 +157,31 @@ body {
     font-family: "Titillium Web",
         sans-serif;
 }
-.member{
+
+.member {
     width: 500px;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 5px #2c3a67ce;
 }
-.memberImg{
+
+.memberImg {
     width: 150px;
 }
+
 .memberImg img {
     width: 100px;
     height: 100px;
     border-right: 3px dotted #474646;
 }
-.memberName{
+
+.memberName {
     width: 400px;
 }
-.memberName h3{
+
+.memberName h3 {
     letter-spacing: -2px;
 }
-.memberName p{
+
+.memberName p {
     text-indent: 5px;
     letter-spacing: -.5px;
     overflow-x: auto;
@@ -181,6 +190,100 @@ body {
 }
 
 /* end section2 */
+
+/* start section3 */
+.section3 {
+    margin-top: 100px;
+    border-bottom: 3px dotted #153a07;
+}
+
+/* end section3 */
+
+
+/* start footer */
+.footer {
+    background-color: var(--backgroundColor);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 15px 20px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.footerContent {
+    color: #7c807a;
+}
+
+.usContacts {
+    height: 100px;
+    width: 150px;
+    border-right: 4px double #3a493ac0;
+
+}
+
+.icon {
+    color: #1d5a1dc0;
+    width: 30px;
+    height: 30px;
+}
+
+.icon:hover {
+    color: #128412ee;
+    box-shadow: 1px 1px 1px #14c014f5;
+}
+
+.leftFooter .footerUsContacts {
+    color: #7c807a;
+}
+
+.footerRight {
+    width: 200px;
+}
+
+.airplaneIcon {
+    animation: airplaneIcon 10s ease-in-out infinite alternate;
+}
+
+@keyframes airplaneIcon {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    30% {
+        transform: rotate(90deg);
+    }
+
+    40% {
+        transform: rotate(90deg) translateX(200px);
+    }
+
+    50% {
+        transform: rotate(90deg) translateY(100px);
+    }
+
+    60% {
+        transform: rotate(-90deg) translateX(300px);
+    }
+
+    70% {
+        transform: rotate(0deg) translateY(50px);
+    }
+
+    80% {
+        transform: rotate(90deg) translateX(100px);
+    }
+
+    90% {
+        transform: rotate(0deg) translateY(200px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateY(50px);
+    }
+}
+
+
+/* end footer */
 
 /* special */
 html {
